@@ -33,4 +33,8 @@ $( document ).ready(function() {
 		document.getElementById("Contacts").style.display = "none";
 		document.getElementById("WorkHistory").style.display = "";
 	}
+
+	document.getElementById("PrevStudentButton").onclick = () => {
+		window.location.href = "https://mghansen1.github.io/";
+	}
 });
