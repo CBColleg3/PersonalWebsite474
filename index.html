@@ -24,7 +24,7 @@
             body {
                 background-color: #111632;
                 background-image: linear-gradient(180deg, #111632 0%, #194161 100%);
-                height: 100vh;
+                height: 150vh;
                 color: white;
             }
 
@@ -32,30 +32,62 @@
                 background-color: #111632; 
                 color: white;
             }
+
+            .navbar {
+                background-color:black; 
+                height: 10vh; 
+                font-size: 1.3em; 
+                font-weight: 100;
+            }
+
+            .hover-underline-animation {
+                display: inline-block;
+                position: relative;
+                color: white;
+            }
+
+            .hover-underline-animation::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: white;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+                }
+
+            .hover-underline-animation:hover::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
         </style>
     </head>
+
     <body>
-        <nav class="navbar navbar-expand-sm topnav-centered">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Bennett Base</a>
+        <nav class="navbar navbar-expand-sm topnav-centered"">
+            <div class="navbar-header hover-underline-animation">
+                <div class="navbar-brand" id="HomePage" style="cursor: pointer; font-size: 1.3em">Bennett Base</div>
             </div>
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Me</a>
+                <li class="nav-item hover-underline-animation">
+                    <div class="nav-link" id="AboutMeLink" style="cursor: pointer;">About Me</div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacts</a>
+                <li class="nav-item hover-underline-animation">
+                    <div class="nav-link" id="ContactsPage" style="cursor: pointer;">Contacts</div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
+                <li class="nav-item hover-underline-animation">
+                    <div class="nav-link" id="WorkHistoryPage" style="cursor: pointer;">Work History</div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Work History</a>
+                <li class="nav-item hover-underline-animation">
+                    <a class="nav-link" href="https://mattm401.github.io/" style="color: white !important; text-decoration: none;">Class Page</a>
                 </li>
             </ul>
         </nav>
 
-        <div class = "text-center">
+        <div id="Home" class = "text-center" style="margin-top: 6vh;"">
 
             <div class = "text-center">
                 <img style="border-radius: 5em; height: 50vh; width: 62vh;" 
@@ -64,29 +96,25 @@
             </div>
                 <p>This is webpage about Christopher Bennett</p>
                 <div class='container'>
-                    <p>
-                Web Dev Interests:
-                        <ul>
-                    <li>
-                        Game Development
-                    </li>
-                    <li>
-                        Authentication
-                    </li>
-                    <li>
-                        Storing Data/Building a good Backend
-                    </li>
-                    <li>
-                        Styling	
-                    </li>
-
-                </ul>
-                    </p>
-                    <div id="jumbotron">
-                    </div>
                 </div>
+                <button class="btn btn-outline-primary">Previous Student</button>
+                <button class="btn btn-outline-primary">Next Student</button>
 	    </div>
 
+        <div id="AboutMe" style="display: none; text-align: center;">
+            <div>Do the Swag.</div>
+
+            <p>
+                Web Dev Interests:
+                        
+            </p>
+        </div>
+
+        <div id="Contacts" style="display: none; text-align: center;">
+        </div>
+
+        <div id="WorkHistory" style="display: none; text-align: center;">
+        </div>
 
         <script src='index.js'></script>
     </body>
