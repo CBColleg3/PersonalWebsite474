@@ -37,4 +37,8 @@ $( document ).ready(function() {
 	document.getElementById("PrevStudentButton").onclick = () => {
 		window.location.href = "https://mghansen1.github.io/";
 	}
+
+	document.getElementById("NextStudentButton").onclick = () => {
+		window.location.href = "https://mbiet11.github.io/";
+	}
 });
