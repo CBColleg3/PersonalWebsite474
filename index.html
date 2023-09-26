@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Here's the header, we include bootstrap, jquery, and include javascript for emailjs. We also set the title of the site and the title image -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-
-        ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
-
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-
-        CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonym
-        ous"></script>
-
-        <script src='index.js'></script>
+        <script src='js/index.js'></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+        </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>
@@ -20,57 +15,14 @@
         </title>
 
         <link rel="icon" type="image/png" href="images/christitlepfp.jpg"/>
-
-        <style>
-            body {
-                background-color: #111632;
-                background-image: linear-gradient(180deg, #111632 0%, #194161 100%);
-                height: 150vh;
-                color: white;
-            }
-
-            nav {
-                background-color: #111632; 
-                color: white;
-            }
-
-            .navbar {
-                background-color:black; 
-                height: 10vh; 
-                font-size: 1.3em; 
-                font-weight: 100;
-            }
-
-            .hover-underline-animation {
-                display: inline-block;
-                position: relative;
-                color: white;
-            }
-
-            .hover-underline-animation::after {
-                content: '';
-                position: absolute;
-                width: 100%;
-                transform: scaleX(0);
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                background-color: white;
-                transform-origin: bottom right;
-                transition: transform 0.25s ease-out;
-                }
-
-            .hover-underline-animation:hover::after {
-                transform: scaleX(1);
-                transform-origin: bottom left;
-            }
-        </style>
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-sm topnav-centered"">
+        <!-- Navbar at the top, includes the class with the animations and different links to other parts of the site -->
+        <nav class="navbar navbar-expand-sm topnav-centered">
             <div class="navbar-header hover-underline-animation">
-                <div class="navbar-brand" id="HomePage" style="cursor: pointer; font-size: 1.3em">Bennett Base</div>
+                <div class="navbar-brand" id="HomePage" style="cursor: pointer; font-size: 1.3em;">Bennett Base</div>
             </div>
             <ul class="navbar-nav">
                 <li class="nav-item hover-underline-animation">
@@ -85,14 +37,21 @@
                 <li class="nav-item hover-underline-animation">
                     <a class="nav-link" href="https://mattm401.github.io/" style="color: white !important; text-decoration: none;">Class Page</a>
                 </li>
+                <li class ="nav-item hover-underline-animation">
+                    <a class="nav-link" href="https://mghansen1.github.io/" style="color: white !important; text-decoration: none;">Prev Student</a>
+                </li>
+                <li class="nav-item hover-underline-animation">
+                    <a class="nav-link" href="https://mbiet11.github.io/" style="color: white !important; text-decoration: none;">Next Student</a>
+                </li>
             </ul>
         </nav>
 
-        <div id="Home" class = "text-center" style="margin-top: 6vh;"">
+        <!--Home-->
+        <div id="Home" class = "text-center" style="margin-top: 6vh;">
 
             <div class = "text-center">
                 <img style="border-radius: 5em; height: 50vh; width: 62vh;" 
-                src="images/chrispfp.jpg" alt="A picture of Christopher Bennett."/>
+                src="images/chrispfp.jpg" alt="A picture of Christopher Bennett.">
                 <h1>Christopher Bennett</h1>
             </div>
                 <p>This is webpage about Christopher Bennett</p>
@@ -102,18 +61,75 @@
                 <button class="btn btn-outline-primary" id="NextStudentButton">Next Student</button>
 	    </div>
 
+
+           <!--About Me Page-->
         <div id="AboutMe" style="display: none; text-align: center;">
-            <div>Do the Swag.</div>
+            <div class="card" style="width: 18rem; margin:auto; margin-top: 5em;width:40em;height: 35em;background-color: rgba(0, 0, 0, 0.2);">
+                <div style="margin-top: 10em">
+                    <h2>Hello! 👋🏾</h2>
+                    <p>
+                        My name is Christopher Bennett and I am a Senior Computer Science Major.<br>
+                        I am interested in Software Development and Game Development. <br>
+                        My hobbies involve lifting, cycling, and designing games.<br>
+                    </p>
+                </div>
 
-            <p>
-                Web Dev Interests:
-                        
-            </p>
+            </div>
         </div>
 
+
+        <!--Contacts Page. It's a card with a form inside of it in the needs validation class. Submit button is at the bottom.-->
         <div id="Contacts" style="display: none; text-align: center;">
+            <div class="card" style="width: 18rem; margin:auto; margin-top: 5em;width:40em;height: 35em;background-color: rgba(0, 0, 0, 0.2);">
+
+                <form name="contactForm" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <div class="card-body opacity-25">
+                            <h5 class="card-title">Contacts</h5>
+                            <p class="card-text">
+                              <div class="input-group mb-3" style="background-color:black;">
+                                  <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon1">@</span>
+                                  </div>
+                                  <input type="text" class="form-control" placeholder="Last Name" name="lname" aria-describedby="basic-addon1" required>
+                              </div>   
+                              
+                              <div class="input-group mb-3" style="background-color:black;">
+                                  <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon1">@</span>
+                                  </div>
+                                  <input type="text" class="form-control" placeholder="First Name" name="fname" aria-describedby="basic-addon1" required>
+                              </div>     
+          
+                              <div class="input-group mb-3" style="background-color:black;">
+                                  <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon1">@</span>
+                                  </div>
+                                  <input type="email" class="form-control" placeholder="Email" name="email" aria-describedby="basic-addon1" required>
+                              </div>    
+          
+                              <div class="input-group mb-3" style="background-color:black;">
+                                  <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon1">@</span>
+                                  </div>
+                                  <input type="text" class="form-control" placeholder="Phone Number" name="phonenumber" aria-describedby="basic-addon1" required>
+                              </div>    
+          
+                              <div class="input-group mb-3" style="background-color:black;">
+                                  <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon1">@</span>
+                                  </div>
+                                  <textarea class="form-control" id="exampleFormControlTextarea1" name="message" placeholder="Message" rows="3" required></textarea>
+                              </div>    
+                            </p>
+                            <button id="ContactSubmitButton" type="submit" class="btn btn-primary">Submit</button>
+                          </div>
+                    </div>
+                </form>
+              </div>
         </div>
 
+        <!-- Work History Page-->
         <div id="WorkHistory" style="display: none; text-align: center;">
         </div>
 
