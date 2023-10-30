@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <!-- Here's the header, we include bootstrap, jquery, and include javascript for emailjs. We also set the title of the site and the title image -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        <script src='js/index.js'></script>
         <script type="module" src='js/navbar.js'></script>
-        <script type="module" src='js/index.js'></script>
+        <script type="module" src='js/contactform.js'></script>
         <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
         </script>
         <meta charset="utf-8">
@@ -30,45 +30,15 @@
         
 
     <body>
+        <!-- Navbar at the top, includes the class with the animations and different links to other parts of the site -->
+        
+
         <div id="NavbarHere"></div>
         <div id="Dropdown"></div>
 
-        <!--Home-->
-        <div id="Home" class = "text-center" style="margin-top: 6vh;">
-
-            <div class = "text-center">
-                <img style="border-radius: 5em; height: 50vh; width: 62vh;" 
-                src="images/chrispfp.jpg" alt="A picture of Christopher Bennett.">
-                <h1>Christopher Bennett</h1>
-            </div>
-                <div class='container'>
-                </div>
-                <p style="margin: 1.5rem">Hey I'm Chris, I like to do work in Software Development 🖥️ and Game Development.🎲</p>
-                <p>Feel free to reach out to me at cbcolleg@udel.edu!</p>
-	    </div>
-
-
-           <!--About Me Page-->
-        <div id="AboutMe" style="display: none; text-align: center;">
-            <div class="transparent-card">
-                <div style="margin-top: 10em">
-                    <h2>Hello! 👋🏾</h2>
-                    <p>
-                        My name is Christopher Bennett and I am a Senior Computer Science Major.<br>
-                        I am interested in Software Development and Game Development. <br>
-                        My hobbies involve lifting, cycling, and designing games.<br>
-                        <a href="https://drive.google.com/file/d/16LIkIDnL_wX9LJ4Sqw6kM3Gv-p-eTds8/view?usp=sharing">Check out the Resume.</a>
-                    </p>
-
-                </div>
-
-            </div>
-        </div>
-
-
         <!--Contacts Page. It's a card with a form inside of it in the needs validation class. Submit button is at the bottom.-->
-        <div id="Contacts" style="display: none; text-align: center;">
-            <div class="card" style="width: 18rem; margin:auto; margin-top: 5em;width:40em;height: 35em;background-color: rgba(0, 0, 0, 0.2);">
+        <div id="Contacts" style="text-align: center; margin-top: 5em;">
+            <div class="transparent-card">
 
                 <form name="contactForm" class="needs-validation" novalidate>
                     <div class="form-group">
@@ -114,22 +84,5 @@
                 </form>
               </div>
         </div>
-
-
-
-        <nav id="NavbarFooter" class="navbar navbar-expand-sm topnav-centered" style="margin-top: 30rem; height: 25vh">
-            <ul class="navbar-nav">
-                <li class="nav-item hover-underline-animation">
-                    <a class="nav-link" href="https://github.com/CBColleg3" style="cursor: pointer; color: white !important">GitHub</a>
-                </li>
-                <li class="nav-item hover-underline-animation">
-                    <a class="nav-link" style="cursor: pointer; color: white !important" href="https://www.linkedin.com/in/christopher-bennett-b11167168/">Linkedin</a>
-                </li>
-                <li class="nav-item hover-underline-animation">
-                    <a class="nav-link" href="https://store.steampowered.com/app/2303670/Escape_From_The_Sun/" style="cursor: pointer; color: white !important"">Steam</a>
-                </li>
-            </ul>
-        </nav> 
-
     </body>
 </html>
