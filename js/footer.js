@@ -21,6 +21,9 @@ $( document ).ready(function() {
                 <li class="nav-item hover-underline-animation">
                     <a class="nav-link" href="https://store.steampowered.com/app/2303670/Escape_From_The_Sun/" style="cursor: pointer; color: white !important">Steam</a>
                 </li>
+                <li class="nav-item hover-underline-animation">
+                    <a class="nav-link" href="https://spacegames3.itch.io/" style="cursor: pointer; color: white !important">Itch.io</a>
+                </li>
             </ul>
         </nav> 
         
