@@ -9,7 +9,6 @@ body {
 .projects-body {
     background-color: #111632;
     background-image: linear-gradient(180deg, #111632 0%, #194161 100%);
-    height: 350vh;
     color: white;
     animation: fadeIn 2s;
 }
@@ -51,7 +50,8 @@ nav {
 }
 
 .transparent-card {
-    margin:auto; 
+    margin:auto;
+    margin-top: 50px; 
     width:40em;
     height: 35em;
     background-color: rgba(0, 0, 0, 0.2);
@@ -60,6 +60,7 @@ nav {
 
 .transparent-card-noexpand {
     margin:auto; 
+    margin-top: 50px; 
     width:40em;
     height: 35em;
     background-color: rgba(0, 0, 0, 0.2);
@@ -67,7 +68,8 @@ nav {
 }
 
 .transparent-card:hover {
-    width: 70rem;
+    width: 70rem; 
+    margin-top: 50px; 
     height:40em;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -94,7 +96,7 @@ nav {
   .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    padding: 30px;
     font-size: 30px;
     text-align: center;
   }
@@ -104,19 +106,18 @@ nav {
     overflow: hidden;
     text-overflow: ellipsis;
     margin-top: 22px;
-    padding: 2px;
+    padding: 20px;
+    overflow-y: auto;
 }
 
 .transparent-card:hover  .overflow-ellipsis {
     white-space: initial;
     transition: all 0.3s;
-
 }
 
 .transparent-card-picture {
     width: 600px;
     height: 300px;
-
 }
 
 .transparent-card:hover  .transparent-card-picture {
