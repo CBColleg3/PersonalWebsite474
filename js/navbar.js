@@ -14,7 +14,7 @@ $( document ).ready(function() {
         `
             <div class="navbar-header hover-underline-animation">             
                 <a href="./index.html" class="navbar-brand" id="HomePage" style="cursor: pointer; font-size: 1.3em; margin-left: 10px; margin-right: 10px">
-                    <img src="images/christitlepfp.jpg" alt="picture of Chris Bennett" width="60" height="60">
+                    <img src="images/chrisbennettprofessional.jpg" alt="picture of Chris Bennett" width="60" height="60">
                 </a>
             </div>
            
@@ -31,25 +31,20 @@ $( document ).ready(function() {
                 <li class="nav-item hover-underline-animation">
                     <a class="nav-link" href="./projects.html" id="ProjectsPage" style="color: white !important; cursor: pointer;">Projects</a>
                 </li>
-                <li id="ClassLinks" class="nav-item dropdown">
-                    <button id="ClassLinksList" class="btn btn-dark dropdown-toggle" style="margin-left:12px;  margin-top: 7px;" 
-                    data-bs-toggle="dropdown" aria-expanded="false">Class Links</button>
-                    <ul id="Dropdown" class="dropdown-menu dropdown-menu-dark">
-                    </ul>
-                </li>
             </ul>  
-        
         `;
 
         document.querySelector("#NavbarHere").appendChild(navbar);
         createDropDown();
         hideDropDown();
 
+        /*
         document.querySelector("#NavbarHere").querySelector("#NavbarHeader").querySelector("#ClassLinks").onmouseover = () => {
             //Submit Button Link clicked,call validate form function.
-            console.log("class links clicked");
-            showDropDown();
+           // console.log("class links clicked");
+            //showDropDown();
         }
+        */
 
         /*
 
@@ -59,6 +54,12 @@ $( document ).ready(function() {
             hideDropDown();
         }
         */
+
+        const Chris = "Software Developer";
+
+        if (Chris.startsWith("S")) {
+            console.log("Wrong, it starts with C...");
+        }
 	
 	}
 
