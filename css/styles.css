@@ -1,25 +1,17 @@
 body {
-    background-color: #111632;
-    background-image: linear-gradient(180deg, #111632 0%, #194161 100%);
-    color: white;
-    animation: fadeIn 2s;
-}
-
-.projects-body {
-    background-color: #111632;
-    background-image: linear-gradient(180deg, #111632 0%, #194161 100%);
+    background-color: #181818;
     color: white;
     animation: fadeIn 2s;
 }
 
 nav {
-    background-color: #111632; 
+    background-color: #181818; 
     color: white;
     transition: all 0.25s ease-out;
 }
 
 .navbar {
-    background-color:black; 
+    background-color:rgb(19, 19, 19); 
     height: 10vh; 
     font-size: 1.3em; 
     font-weight: 100;
